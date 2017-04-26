@@ -1,6 +1,11 @@
 server:
   port: 8888
-  
+
+logging:
+  file: F:\\common-microservice-config.log
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
 spring:
   application:
     name: configserver
@@ -8,6 +13,11 @@ spring:
     config:
       server:
         git:
-          uri: http://root@10.167.202.133/root/config-repo.git
+          # uri: http://root@10.167.202.133/root/config-repo.git
+          uri: https://github.com/meidi/microservice-config.git
+          # username: trolley
+          # password: strongpassword
+          # searchPaths: '{application}'
+          # force-pull: true
           
 

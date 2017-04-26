@@ -81,5 +81,6 @@
 	<modules>
 		<module>common-microservice-eureka</module>
 		<module>common-microservice-config</module>
+		<module>common-microservice-config-client</module>
 	</modules>
 </project>
