@@ -83,5 +83,7 @@
 		<module>common-microservice-config</module>
 		<module>common-microservice-config-client</module>
 		<module>common-microservice-eureka-client</module>
+		<module>common-microservice-hystrix</module>
+		<module>common-microservice-hystrix-client</module>
 	</modules>
 </project>

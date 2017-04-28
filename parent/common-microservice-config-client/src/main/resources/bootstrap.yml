@@ -1,6 +1,10 @@
 server:
   port: 8080
-  
+logging:
+  file: common-microservice-config-client.log
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
 spring:
   application:
     name: foo

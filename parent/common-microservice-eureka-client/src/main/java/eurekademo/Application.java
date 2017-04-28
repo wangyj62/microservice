@@ -15,7 +15,7 @@ public class Application {
 
 	@RequestMapping("/")
 	public String home() {
-		return "This is a trivial service that demonstrates how a Eureka Client can register with a Eureka Server";
+		return "我是一个注册在Eureka上的服务";
 	}
 
 	public static void main(String[] args) {
