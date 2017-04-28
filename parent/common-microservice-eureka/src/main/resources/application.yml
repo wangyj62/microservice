@@ -1,6 +1,12 @@
 server:
   port: 8761
 
+logging:
+  file: common-microservice-eureka.log
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
+
 eureka:
   client:
     registerWithEureka: false

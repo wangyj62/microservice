@@ -2,7 +2,7 @@ server:
   port: 8888
 
 logging:
-  file: F:\\common-microservice-config.log
+  file: common-microservice-config.log
   levels:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG

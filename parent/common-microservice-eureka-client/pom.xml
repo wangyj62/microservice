@@ -6,10 +6,10 @@
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>common-microservice-eureka</artifactId>
-
+	<artifactId>common-microservice-eureka-client</artifactId>
+	
 	<properties>
-		<start-class>eurekademo.EurekaApplication</start-class>
+		<start-class>eurekademo.Application</start-class>
 	</properties>
 	
 	<dependencies>
@@ -21,15 +21,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
-		</dependency> 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 	
 	<build>
@@ -40,5 +31,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

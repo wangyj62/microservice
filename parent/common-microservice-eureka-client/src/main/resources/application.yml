@@ -1,0 +1,7 @@
+server:
+  port: 9000
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://user:password@10.167.202.129:8761}/eureka/
