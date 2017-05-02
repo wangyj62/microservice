@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: user
+logging:
+  file: common-microservice-ribbon.log
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
+server:
+  port: 9999
+
+user-login:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: poc-4.novalocal:9000,poc-4.novalocal:9001
+    ServerListRefreshInterval: 15000

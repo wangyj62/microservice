@@ -1,7 +1,7 @@
 server:
-  port: 9000
+  port: 9001
 logging:
-  file: common-microservice-eureka-client.log
+  file: common-microservice-eureka-client-9001.log
   levels:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG

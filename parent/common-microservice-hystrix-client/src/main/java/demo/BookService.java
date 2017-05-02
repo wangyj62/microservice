@@ -21,10 +21,11 @@ public class BookService {
 	@HystrixCommand(fallbackMethod = "reliable")
 	public String readingList() {
 		int randomInt = random.nextInt(10);
+		System.out.println("randomInt:"+randomInt);
 		if (randomInt < 3) { // 模拟调用失败情况
 			throw new RuntimeException("call dependency service fail.");
 		} else {
-			URI uri = URI.create("http://localhost:8090/recommended");
+			URI uri = URI.create("http://10.167.202.129:7000/recommended");
 			return this.restTemplate.getForObject(uri, String.class);
 		}
 
