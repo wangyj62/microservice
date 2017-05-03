@@ -1,0 +1,11 @@
+server:
+  port: 9300
+logging:
+  file: common-microservice-feign.log
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://poc-4.novalocal:8761/eureka/

@@ -86,5 +86,6 @@
 		<module>common-microservice-hystrix</module>
 		<module>common-microservice-hystrix-client</module>
 		<module>common-microservice-ribbon</module>
+		<module>common-microservice-feign</module>
 	</modules>
 </project>

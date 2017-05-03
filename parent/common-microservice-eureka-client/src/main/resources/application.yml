@@ -8,4 +8,5 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://user:password@10.167.202.129:8761}/eureka/
+      defaultZone: http://poc-4.novalocal:8761/eureka/
+      # defaultZone: ${EUREKA_URL:http://user:password@10.167.202.129:8761}/eureka/
