@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8880
 logging:
   file: common-microservice-config-client.log
   levels:
@@ -7,9 +7,9 @@ logging:
     org.springframework.web: DEBUG
 spring:
   application:
-    name: foo
+    name: usercheck
   profiles:
-    active: production
+    active: online
   cloud:
     config:
       uri: http://poc-4.novalocal:8888

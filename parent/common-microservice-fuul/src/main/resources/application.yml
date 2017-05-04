@@ -1,0 +1,12 @@
+server:
+  port: 8090
+logging:
+  file: common-microservice-fuul.log
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
+zuul:
+  routes:
+    users:
+      url: http://poc-4.novalocal:9001
+      

@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientApplication {
 
-    @Value("${foo}")
-    String foo;
+    @Value("${eureka.server.hostname}")
+    String hostname;
     
-    @Value("${name}")
-    String name;
+    @Value("${eureka.server.port}")
+    String port;
     
-    @RequestMapping(value = "/hi")
+    @RequestMapping(value = "/config")
     public String hi(){
-        return foo+":"+name;
+        return hostname+":"+port;
     }
-    
+
     public static void main(String[] args) {
         SpringApplication.run(ConfigClientApplication.class, args);
     }

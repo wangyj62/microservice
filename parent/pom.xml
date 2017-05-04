@@ -87,5 +87,29 @@
 		<module>common-microservice-hystrix-client</module>
 		<module>common-microservice-ribbon</module>
 		<module>common-microservice-feign</module>
+		<module>common-microservice-fuul</module>
 	</modules>
+
+	<profiles>
+		<profile>
+			<id>run</id>
+			<properties>
+				<microservice.config.git.repo>https://github.com/meidi/microservice-config.git</microservice.config.git.repo>
+				<microservice.config.url>http://poc-4.novalocal:8888</microservice.config.url>
+            	<microservice.eureka>http://poc-4.novalocal:8761/eureka/</microservice.eureka>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>online</id>
+			<properties>
+            	<microservice.config.git.repo>https://github.com/meidi/microservice-config.git</microservice.config.git.repo>
+				<microservice.config.url>http://poc-4.novalocal:8888</microservice.config.url>
+            	<microservice.eureka>http://poc-4.novalocal:8761/eureka/</microservice.eureka>
+			</properties>
+		</profile>
+	</profiles>
+	
 </project>
