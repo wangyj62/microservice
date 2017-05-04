@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://poc-4.novalocal:8761/
+server:
+  port: 8764
+spring:
+  application:
+    name: usercheck
+usercheck:
+  ribbon:
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    DeploymentContextBasedVipAddresses: poc-4.novalocal
+    UseIPAddrForServer: true

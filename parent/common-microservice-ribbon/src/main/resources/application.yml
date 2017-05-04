@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user
+    name: service-ribbon
 logging:
   file: common-microservice-ribbon.log
   levels:
@@ -8,10 +8,16 @@ logging:
     org.springframework.web: DEBUG
 server:
   port: 9999
-
-user-login:
+# 以下是不通过Eureka
+usercheck:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: poc-4.novalocal:9000,poc-4.novalocal:9001
+    listOfServers: poc-4.novalocal:9102,poc-4.novalocal:9103
     ServerListRefreshInterval: 15000
+# 以下是通过Eureka
+#eureka:
+#  client:
+#    serviceUrl:
+#       defaultZone: http://poc-4.novalocal:8761/eureka/
+

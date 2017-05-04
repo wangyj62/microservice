@@ -88,6 +88,7 @@
 		<module>common-microservice-ribbon</module>
 		<module>common-microservice-feign</module>
 		<module>common-microservice-fuul</module>
+		<module>common-microservice-ribbon-eureka</module>
 	</modules>
 
 	<profiles>

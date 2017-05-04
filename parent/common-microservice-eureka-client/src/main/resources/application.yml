@@ -1,7 +1,7 @@
 server:
   port: 9102
 logging:
-  file: common-microservice-eureka-client-9102.log
+  file: common-microservice-eureka-client-9103.log
   levels:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG

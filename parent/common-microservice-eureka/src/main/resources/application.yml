@@ -7,6 +7,9 @@ logging:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG
 eureka:
+  instance:
+    hostname: ${eureka.server.hostname}
+  #在默认情况下erureka server也是一个eureka client,通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
   client:
     registerWithEureka: false
     fetchRegistry: false

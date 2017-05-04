@@ -19,17 +19,17 @@ public class Application {
 
 	@RequestMapping("/")
 	public String home() {
-		return "我是一个注册在Eureka上的服务,第三方接口: "+api;
+		return "我是一个注册在Eureka上的服务,第三方接口[9102]: "+api;
 	}
 	
 	@RequestMapping("/idcheck")
 	public String idcheck() {
-		return "ID已存在";
+		return "ID已存在[9102]";
 	}
 	
 	@RequestMapping("/user/check")
 	public String usercheck(String name) {
-		return "用户"+name+"已存在";
+		return "用户"+name+"已存在[9102]";
 	}
 	
 

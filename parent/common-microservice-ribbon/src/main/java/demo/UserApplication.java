@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 @SpringBootApplication
 @RestController
-@RibbonClient(name = "user-login", configuration = SayHelloConfiguration.class)
+@RibbonClient(name = "usercheck", configuration = SayHelloConfiguration.class)
 public class UserApplication {
 
   @LoadBalanced
@@ -29,7 +30,7 @@ public class UserApplication {
 
   @RequestMapping("/hi")
   public String hi(@RequestParam(value="name", defaultValue="meidi") String name) {
-    String greeting = this.restTemplate.getForObject("http://user-login/", String.class);
+    String greeting = this.restTemplate.getForObject("http://usercheck/", String.class);
     return String.format("%s, %s!", greeting, name);
   }
 
