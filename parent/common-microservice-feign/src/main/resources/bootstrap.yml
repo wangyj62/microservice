@@ -1,6 +1,6 @@
 spring:
   application:
-    name: usercheck
+    name: feign-service
   profiles:
     active: online
   cloud:
