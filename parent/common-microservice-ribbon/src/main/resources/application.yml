@@ -1,23 +1,32 @@
-spring:
-  application:
-    name: service-ribbon
+server:
+  port: 9999
 logging:
   file: common-microservice-ribbon.log
   levels:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG
-server:
-  port: 9999
+management: 
+  security: 
+    enabled: false
 # 以下是不通过Eureka
-usercheck:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: poc-4.novalocal:9102,poc-4.novalocal:9103
-    ServerListRefreshInterval: 15000
+#usercheck:
+#  ribbon:
+#    eureka:
+#      enabled: false
+#    listOfServers: poc-4.novalocal:9102,poc-4.novalocal:9103
+#    ServerListRefreshInterval: 15000
 # 以下是通过Eureka
-#eureka:
-#  client:
-#    serviceUrl:
-#       defaultZone: http://poc-4.novalocal:8761/eureka/
+eureka:
+  client:
+    serviceUrl: 
+      defaultZone: http://poc-4.novalocal:8761/eureka/
+      healthcheck: 
+        enabled: true
+    healthcheck:
+      enabled: true
+usercheck-v1: 
+  ribbon:
+    DeploymentContextBasedVipAddresses: USERCHECK
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    ServerListRefreshInterval: 15000
 

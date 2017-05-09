@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ribbon-service
+  profiles:
+    active: online
+  cloud:
+    config:
+      uri: http://poc-4.novalocal:8888
+      label: master

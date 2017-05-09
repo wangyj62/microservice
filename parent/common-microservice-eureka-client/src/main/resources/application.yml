@@ -1,10 +1,13 @@
 server:
   port: 9102
 logging:
-  file: common-microservice-eureka-client-9103.log
+  file: common-microservice-eureka-client-9102.log
   levels:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG
+management: 
+  security: 
+    enabled: false
 eureka:
   client:
     serviceUrl:
@@ -13,3 +16,5 @@ eureka:
       # defaultZone: ${EUREKA_URL:http://user:password@10.167.202.129:8761}/eureka/
       #healthcheck:
       #  enabled: true
+    healthcheck:
+      enabled: true
