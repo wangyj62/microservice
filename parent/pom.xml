@@ -91,6 +91,7 @@
 		<module>common-microservice-ribbon-eureka</module>
 		<module>common-microservice-springboot-ui</module>
 		<module>common-microservice-turbine</module>
+		<module>common-microservice-docker</module>
 	</modules>
 
 	<profiles>
