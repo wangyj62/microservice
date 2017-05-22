@@ -12,7 +12,8 @@ public class HelloController {
 	private UserClient userClient;
 
 	@RequestMapping(value = "hi", method = RequestMethod.GET)
-	public String getHello() { 
+	public String getHello() {  
+		// test push request
 		return userClient.hi();
 	}
 	
