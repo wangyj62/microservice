@@ -12,7 +12,7 @@ public class HelloController {
 	private UserClient userClient;
 
 	@RequestMapping(value = "hi", method = RequestMethod.GET)
-	public String getHello() {
+	public String getHello() { 
 		return userClient.hi();
 	}
 	
